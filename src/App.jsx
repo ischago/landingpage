@@ -10,9 +10,9 @@ import vsl from "./assets/vsl.mp4";
 import textStartHere from "./assets/text-start-here.svg";
 import arrowDown from "./assets/arrow-down.svg";
 import frame from "./assets/Frame.svg";
-import firstVideo from "./assets/first-video.mp4";
-import secondVideo from "./assets/second-video.mp4";
-import thirdVideo from "./assets/third-video.mp4";
+import firstVideo from "./assets/first-video.MP4";
+import secondVideo from "./assets/second-video.MP4";
+import thirdVideo from "./assets/third-video.MP4";
 import review1 from "./assets/review-1.svg";
 import review2 from "./assets/review-2.svg";
 
