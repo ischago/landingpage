@@ -9,7 +9,7 @@ import miniFolder from "./assets/mini-folder.svg";
 import vsl from "./assets/vsl.mp4";
 import textStartHere from "./assets/text-start-here.svg";
 import arrowDown from "./assets/arrow-down.svg";
-import frame from "./assets/frame.svg";
+import frame from "./assets/Frame.svg";
 import firstVideo from "./assets/first-video.mp4";
 import secondVideo from "./assets/second-video.mp4";
 import thirdVideo from "./assets/third-video.mp4";
