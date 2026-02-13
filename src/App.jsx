@@ -121,7 +121,7 @@ function App() {
         </div>
       </section>
       <section className="animate-fade-in-up">
-        <div className="flex flex-col justify-center bg-[#F5FFF4] pt-10">
+        <div className="flex flex-col justify-center bg-[#F5FFF4] pt-10 pb-20">
           <div className="flex flex-col items-center">
             <h3 className="font-neue-bold text-2xl w-2/3 text-center text-[#262926]">
               EXPLORA EL CONTENIDO DE LA
