@@ -34,7 +34,7 @@ function App() {
       <section className="relative py-10 bg-[#F5FFF4] animate-fade-in-up">
         <div className="absolute inset-0 opacity-70 bg-[url('./assets/TEXTURE_Paper.png')] bg-cover bg-center bg-no-repeat pointer-events-none mask-[linear-gradient(to_bottom,black_70%,transparent)]"></div>
         <div className="flex flex-col items-center justify-start gap-6 relative z-10">
-          <h2 className="font-instrument-serif text-center italic max-[400px]:text-3xl text-4xl sm:text-5xl text-[#163A11]">
+          <h2 className="font-instrument-serif text-center italic max-[400px]:text-2xl text-3xl text-[#163A11]">
             Masterclass de Contenido Único
           </h2>
           <h1 className="font-neue-bold text-5xl max-w-3xl text-center text-[#262926] leading-tight px-4">
@@ -43,16 +43,16 @@ function App() {
           <p className="font-neue text-xl text-center text-[#262926] max-w-2xl px-4">
             Estas a un solo paso de{" "}
             <span className="font-neue-bold">dominar la habilidad</span> más
-            demandada de esta década, la cuál te hará conseguir cualquier cosa
-            que estés buscando.
+            demandada de esta década, la cuál te hará conseguir todo aquello que
+            estés buscando.
           </p>
           <div className="flex flex-col items-center gap-2 w-full px-4">
             <button className="font-neue text-xl font-extrabold text-center bg-[#346C2D] text-white px-8 py-4 rounded-lg hover:bg-[#2a5624] transition-colors cursor-pointer relative">
-              Aplicar ahora
+              Acceder
               <img
                 src={textStartHere}
                 alt=""
-                className="absolute top-3 right-30 scale-85 sm:right-40 sm:scale-100"
+                className="absolute top-3 -left-30 scale-100 sm:right-40 sm:scale-100"
               />
             </button>
           </div>
@@ -121,7 +121,7 @@ function App() {
         </div>
       </section>
       <section className="animate-fade-in-up">
-        <div className="flex flex-col justify-center bg-[#F5FFF4] pt-10 pb-20">
+        <div className="flex flex-col justify-center bg-[#F5FFF4] pt-10 pb-20 gap-20">
           <div className="flex flex-col items-center">
             <h3 className="font-neue-bold text-2xl w-2/3 text-center text-[#262926]">
               EXPLORA EL CONTENIDO DE LA
@@ -134,6 +134,13 @@ function App() {
           <div className="flex justify-center px-4">
             <FinderWindow />
           </div>
+        </div>
+      </section>
+      <section>
+        <div className="flex items-center justify-center bg-[#F5FFF4] py-10">
+          <button className="font-neue text-xs font-extrabold text-center bg-[#346C2D] text-white px-5 py-3 rounded-lg hover:bg-[#2a5624] tracking-wider transition-colors cursor-pointer">
+            Desbloquear Contenido Completo
+          </button>
         </div>
       </section>
       <section className="animate-fade-in-up">
@@ -150,17 +157,29 @@ function App() {
               Creadores que confiaron en esta masterclass
             </h3>
           </div>
-          <div className="flex flex-col gap-9 lg:grid lg:grid-rows-2 lg:grid-cols-3 items-center justify-center px-8">
+          <div className="flex flex-col gap-9 lg:grid lg:grid-rows-2 lg:grid-cols-3 items-center justify-center px-7 pb-8">
             <div className="row-span-2">
-              <VideoCard videoSrc={firstVideo} />
+              <VideoCard
+                title="@nacho.lietor"
+                description="“Conseguí resultados gracias a crear contenido diferente”"
+                videoSrc={firstVideo}
+              />
             </div>
             <div className="row-span-2 flex flex-col lg:flex-col-reverse gap-9">
               <img src={review1} alt="review-1" className="w-full" />
-              <VideoCard videoSrc={secondVideo} />
+              <VideoCard
+                title="@tiago360_"
+                description="“Di el paso que me faltaba para publicar sin miedo”"
+                videoSrc={secondVideo}
+              />
             </div>
             <div className="row-span-2 flex flex-col gap-9">
               <img src={review2} alt="review-2" className="w-full" />
-              <VideoCard videoSrc={thirdVideo} />
+              <VideoCard
+                title="@ismontxu"
+                description="“No tenía experiencia y acabé haciendo contenido increible”"
+                videoSrc={thirdVideo}
+              />
             </div>
           </div>
         </div>

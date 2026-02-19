@@ -6,13 +6,13 @@ export default function VideoCard({
   videoSrc = "./src/assets/img-for-example.png",
 }) {
   return (
-    <div className="bg-[#F2F2F2CC]/80 backdrop-blur-xl rounded-3xl shadow-[0_5px_20px_0_#0004] p-0 overflow-hidden flex flex-col select-none">
+    <div className="bg-[#F2F2F2CC]/80 backdrop-blur-xl rounded-3xl shadow-[0_9px_20px_0_#0004] p-0 overflow-hidden flex flex-col select-none">
       {/* Header */}
       <div className="pt-6 pb-4 px-6 text-center">
         <h3 className="font-neue-medium text-2xl text-black mb-1 tracking-tight">
           {title}
         </h3>
-        <p className="font-neue font-extrabold text-base text-black/90 leading-tight">
+        <p className="font-neue font-extrabold text-lg text-black/90 leading-tight">
           {description}
         </p>
       </div>
