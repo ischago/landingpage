@@ -1,29 +1,29 @@
 import React from "react";
 
+const Description = ({ text, bold }) => (
+  <p className="font-neue font-bold max-[480px]:text-sm text-lg md:text-base mb-4 text-[#262626]">
+    {text}
+    {bold && <span className="font-neue-bold">{bold}</span>}
+  </p>
+);
+
 export default function IntroductionWindow({
-  title = "1. Introducción MCCU",
-  description = "Hablaremos durante 33 minutos de todo lo que va a hacer que seas el mejor.",
-  subtitle = "Dominarás:",
-  items = [
-    { text: "Mentalidad de mejora constante" },
-    { text: "Aprender a mejorar un poco en cada vídeo" },
-    { text: "Ser autodidacta de forma inteligente" },
-    { text: "Cómo analizar tus propios vídeos" },
-    {
-      text: "Importancia del detallismo (sin pasarse) “Mejor hecho que perfecto”",
-    },
-    { text: "Uso real de la Inteligencia Artificial:" },
-    { text: "no para crear por ti", indent: true },
-    { text: "sí para afilar tus ideas", indent: true },
-    { text: "prompts de calidad", indent: true },
-    { text: "tener claridad, orden y enfoque", indent: true },
-  ],
+  title,
+  description,
+  bold,
+  description2,
+  description3,
+  description4,
+  description5,
+  description6,
+  subtitle,
+  items,
   onClose,
 }) {
   return (
-    <div className="animate-pop-in bg-white rounded-2xl shadow-2xl max-[480px]:w-[300px] w-[430px] max-w-2xl overflow-hidden font-sans border border-gray-100 h-[600px] md:h-[500px] md:w-[600px]">
+    <div className="animate-pop-in bg-white rounded-2xl shadow-2xl max-[480px]:w-[300px] w-[430px] max-w-2xl overflow-y-auto custom-scrollbar font-sans border border-gray-100 h-[600px] md:h-[510px] md:w-[600px]">
       {/* Header */}
-      <div className="px-6 py-3 flex items-center justify-between border-b border-black/10">
+      <div className="px-6 py-3 flex items-center justify-between border-b border-black/10 sticky top-0 bg-white z-10">
         <div className="flex gap-2">
           <div
             onClick={onClose}
@@ -46,7 +46,9 @@ export default function IntroductionWindow({
           >
             <path d="M20 6h-8l-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z" />
           </svg>
-          <span className="font-neue-bold text-[#464646] max-[480px]:text-xs text-base">
+          <span
+            className={`font-neue-bold text-nowrap text-[#464646] max-[480px]:text-xs text-base md:text-base ${title.length > 20 ? "text-xs" : "text-base"}`}
+          >
             {title}
           </span>
         </div>
@@ -55,9 +57,7 @@ export default function IntroductionWindow({
 
       {/* Content */}
       <div className="px-10 py-4 text-[#262626]">
-        <p className="font-neue font-bold max-[480px]:text-sm text-lg md:text-base leading-relaxed mb-10 text-[#262626]">
-          {description}
-        </p>
+        <Description text={description} bold={bold} />
 
         {subtitle && (
           <h3 className="font-instrument-serif italic max-[480px]:text-xl text-2xl md:text-[22px] text-[#262626] mb-4">
@@ -65,17 +65,25 @@ export default function IntroductionWindow({
           </h3>
         )}
 
-        <ul className="font-neue font-bold max-[480px]:text-sm text-lg md:text-base text-[#262626]">
-          {items.map((item, index) => (
-            <li
-              key={index}
-              className={`flex items-start gap-3 ${item.indent ? "pl-4" : ""}`}
-            >
-              <span className="mt-2 w-1 h-1 bg-black rounded-full shrink-0"></span>
-              <span>{item.text}</span>
-            </li>
-          ))}
-        </ul>
+        {description2 && <Description text={description2} />}
+        {description3 && <Description text={description3} />}
+        {description4 && <Description text={description4} />}
+        {description5 && <Description text={description5} />}
+        {description6 && <Description text={description6} />}
+
+        {items && (
+          <ul className="font-neue font-bold max-[480px]:text-sm text-lg md:text-base text-[#262626]">
+            {items.map((item, index) => (
+              <li key={index} className={`flex items-center gap-3`}>
+                <span className="mt-2 w-1 h-1 bg-black rounded-full shrink-0"></span>
+                <span>
+                  {item.text}
+                  <span className="font-neue-bold">{item?.bold}</span>
+                </span>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </div>
   );

@@ -26,14 +26,115 @@ export default function FinderWindow() {
   const [activeItem, setActiveItem] = useState("Masterclass");
 
   const folders = [
-    { id: 1, title: "1. Introducción", subtitle: "MCCU" },
-    { id: 2, title: "2. Titular", subtitle: "MCCU" },
-    { id: 3, title: "3. Titular", subtitle: "MCCU" },
-    { id: 4, title: "4. Titular", subtitle: "MCCU" },
-    { id: 5, title: "5. Introducción", subtitle: "MCCU" },
-    { id: 6, title: "6. Introducción", subtitle: "MCCU" },
-    { id: 7, title: "7. Introducción", subtitle: "MCCU" },
-    { id: 8, title: "8. Introducción", subtitle: "MCCU" },
+    {
+      id: 1,
+      title: "1. Introducción",
+      description: "Creo que no hace falta hablar de qué trata este capítulo… ",
+      description2: "Pero te doy algunos datos interesantes:",
+      items: [
+        { text: "Dura 6 horas y 16 minutos." },
+        { text: "Está dividida en distintas clases." },
+        { text: "Puedes verlas cuando quieras." },
+        { text: "Explico todo para que puedas ", bold: "empezar desde 0." },
+        {
+          text: "Si ya eres experimentado va a darte conocimientos que no se te habían pasado por la cabeza.",
+        },
+        { text: "Doy consejos de nivel alto aplicables." },
+        { text: "Toco todos los temas para que salgas siendo experto." },
+        { text: "Pongo ejemplos prácticos y reales." },
+      ],
+    },
+    {
+      id: 2,
+      title: "2. Herramientas",
+      description: "Todo lo que explico en esta Masterclass lo puedes aplicar ",
+      bold: "desde un móvil.",
+      description2: "Eso sí.",
+      description3: "También podrás aplicarlo con el equipo que ya tengas.",
+      description4:
+        "Dentro revelaré todas las herramientas extra que utilizo personalmente:",
+      items: [
+        { text: "Creación de voz con IA" },
+        { text: "Guionización" },
+        { text: "Inteligencia Artificial" },
+        { text: "Programas de edición" },
+        { text: "Trípodes y soportes para grabar" },
+      ],
+    },
+    {
+      id: 3,
+      title: "3. Identidad",
+      description:
+        "Sinceramente, este capítulo tiene un valor incalculable. Dura 2 horas y 5 minutos.",
+      subtitle: "Aprenderás:",
+      description2:
+        "A reflejar tu identidad en contenido que puedan ver millones de personas.",
+      description3:
+        "Cómo usar tus hobbies, experiencias y gustos para crear contenido único y que sea 100% tuyo.",
+      description4:
+        "Tocaremos desde los colores, tipografías y música, hasta tu forma de hablar y de grabar. Pero lo más importante: aprenderás a que sea tuyo, no una copia de otro.",
+      description5:
+        "Te enseñaré a crear una idea central para tu contenido. Desarrollarás buen gusto y cultura visual.",
+    },
+    {
+      id: 4,
+      title: "4. Se El Mejor",
+      description:
+        "Hablaremos durante 33 minutos de todo lo que va a hacer que seas el mejor.",
+      description2:
+        "Desde la mentalidad que debes tener, hasta cómo desarrollar una habilidad de mejora constante y analizar tu propio contenido para evolucionar.",
+      description3:
+        "Aprenderás la importancia de ser autodidacta y cómo utilizo la IA para afilar ideas y ganar claridad.",
+    },
+    {
+      id: 5,
+      title: "5. Ideazas",
+      description: "Hablaremos de cómo nunca quedarte en blanco.",
+      description2:
+        "Quiero que tengas tantas ideas que tu único problema sea elegir.",
+      description3:
+        "Por eso te enseñaré a diferenciar qué ideas son realmente buenas y cuáles no merecen tu tiempo.",
+      description4:
+        "Entrenaremos tu creatividad y, sobre todo, cómo ejecutar rápido esas ideas sin sobrepensarlas.",
+    },
+    {
+      id: 6,
+      title: "6. Videazos",
+      description:
+        "Después, durante 1 hora y 51 minutos, te hablaré de forma mucho más técnica sobre cómo hacer videazos.",
+      description2:
+        "Tocaremos todas las piezas del puzzle para crear contenido increíble:",
+      description3:
+        "El uso de la música, la gestión de emociones, el ritmo, la coherencia sonora, cómo elegir la canción adecuada según la idea que quieras transmitir y cómo ordenar y encontrar buena música.",
+      description4:
+        "Te enseñaré cómo guionizar correctamente un vídeo, estructurar tus historias, trabajar la retención, la tensión, la conexión emocional y los trucos que hacen que una historia enganche de verdad.",
+      description5:
+        "Después hablaremos de la grabación: tipos de planos, cómo usar tu teléfono para que parezca una cámara y cómo grabar correctamente para que el resultado sea profesional.",
+      description6:
+        "Y profundizaremos en la edición. No te enseñaré a editar botón por botón, sino a tener coherencia con lo que editas y a desarrollar tu propio estilo.",
+    },
+    {
+      id: 7,
+      title: "7. Viralidad + Comunidad + Monetizar",
+      description:
+        "Tocaremos estos 3 pilares clave a la hora de crear contenido.",
+      description2:
+        "Te enseñaré los trucos que me han permitido conseguir millones de visitas, mejorar la retención y entender los patrones que hacen que un vídeo funcione.",
+      description3:
+        "Verás la psicología detrás de un vídeo viral, para que no dependas de la suerte y puedas replicarlo con criterio.",
+      description4:
+        "Aprenderás a construir una comunidad a largo plazo.Una comunidad que esté contigo, que te apoye y que confíe en ti.",
+      description5:
+        "Y, por supuesto, cómo monetizarla correctamente.Te enseñaré distintas formas de monetizar tu contenido y consejos de venta para que puedas vender sin romper la conexión con tu audiencia",
+    },
+    {
+      id: 8,
+      title: "8. Empieza ya",
+      description:
+        "Este capítulo te da el boost de energía y la metodología que necesitas para empezar a crear contenido desde hoy.",
+      description2:
+        "Porque cada minuto que pasa y no estás publicando, es tiempo que estás perdiendo.",
+    },
   ];
 
   return (
@@ -291,12 +392,12 @@ export default function FinderWindow() {
               >
                 <img src={folderIcon} alt="folder" />
                 <div className="text-center">
-                  <div className="font-neue-medium text-xs text-nowrap text-[#262626]">
+                  <h3 className="font-neue-medium text-xs text-wrap text-[#262626]">
                     {folder.title}
-                  </div>
-                  <div className="font-neue-medium text-xs text-[#262626]">
-                    {folder.subtitle}
-                  </div>
+                  </h3>
+                  <h3 className="font-neue-medium text-xs text-[#262626]">
+                    MCCU
+                  </h3>
                 </div>
               </div>
             ))}
@@ -317,6 +418,15 @@ export default function FinderWindow() {
             <div className="relative z-10 w-full max-w-2xl flex justify-center">
               <IntroductionWindow
                 title={activeItem.title}
+                subtitle={activeItem?.subtitle}
+                bold={activeItem.bold}
+                description={activeItem.description}
+                description2={activeItem.description2}
+                description3={activeItem.description3}
+                description4={activeItem.description4}
+                description5={activeItem.description5}
+                description6={activeItem.description6}
+                items={activeItem?.items}
                 onClose={() => setActiveItem("Masterclass")}
               />
             </div>

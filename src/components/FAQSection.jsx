@@ -34,24 +34,48 @@ export default function FAQSection() {
 
   const faqs = [
     {
-      question: "¿Como se si esto es para mi?",
+      question: "¿Para quién es esta Masterclass?",
       answer:
-        "Lorem ipsum dolor sit amet consectetur. Mauris maecenas commodo ornare commodo tristique. Sapien congue nec cras placerat egestas sollicitudin. Urna neque arcu tempor placerat nunc quam at. Neque habitasse condimentum sed sit euismod blandit. Pellentesque nunc elit eleifend praesent. Tincidunt tellus nunc placerat egestas. Quis ut faucibus at viverra a nec ornare quam pellentesque. Pharetra elit est malesuada nunc. Vitae velit proin eu tempor in. Lacus sed dolor lacus id porttitor. Imperdiet facilisis leo id amet magna lectus ligula pellentesque cursus. Ornare potenti lacus mattis mi at eu habitasse nec.",
+        "Es para ti si cumples cualquiera de estas condiciones: Sientes que tu contenido no refleja lo que realmente eres y sabes que eres capaz de tener más atención. Estás cansado de copiar formatos que “funcionan” o buscar “modas” que no te representan. Quieres empezar a crear contenido y no ser uno más. Quieres dejar de competir por atención y empezar a construir autoridad dentro de tu sector.",
     },
     {
-      question: "¿Tendré soporte?",
+      question: "¿En qué se diferencia esta Masterclass?",
       answer:
-        "Sí, contarás con soporte continuo a través de nuestra plataforma y comunidad exclusiva.",
+        "Dentro trabajaremos en tu identidad, tu enfoque y la estructura mental que sostiene todo lo que creas. Dentro implementarás las prácticas necesarias para destacar y dominar la atención.",
     },
     {
-      question: "¿En qué se diferencia de otras?",
+      question: "¿Sirve si tengo pocos seguidores?",
       answer:
-        "Esta masterclass se enfoca en potenciar tu estilo único y convertirte en un creador auténtico, no solo en enseñarte herramientas técnicas.",
+        "El contenido único no depende del tamaño de tu audiencia. De hecho, es muy inteligente aplicar esto cuando estás empezando para asentar unas bases sólidas.",
     },
     {
-      question: "¿Haces factura?",
+      question: "¿Y si ya llevo tiempo creando contenido?",
       answer:
-        "Sí, emitimos factura válida para todos nuestros alumnos que la requieran.",
+        "Mejor, ya has dado el paso más importante, empezar a crear. Probablemente ya intuyes que hacer “lo que hace todo el mundo” no funciona. Ahora vas a entender cómo diferenciarte sin copiar fórmulas virales que duran dos semanas.",
+    },
+    {
+      question: "¿Necesito equipo profesional?",
+      answer:
+        "No, solo necesitas un móvil y conexión a internet para crear contenido único y empezar a ser relevante. Puede ver a personas con la mejor cámara del mundo y el mejor equipo que no llega a ningún lado, ese no va a ser tu caso.",
+    },
+    {
+      question: "¿Cuánto tiempo necesito para aplicar lo que enseñas?",
+      answer:
+        "La masterclass dura 6 horas y 15 minutos. El tiempo suficiente para que no te pierdas con un exceso de teoría. Desde el primer momento en el que empieces a aplicar los primeros aprendizajes empezarás a ver grandes cambios.",
+    },
+    {
+      question: "¿Esto sirve para mi nicho?",
+      answer:
+        "Sí, sirve para tu nicho. La atención es la moneda de cambio de este siglo y si la dominas multiplicarás tus resultados de forma exponencial, independientemente de lo que te dediques.",
+    },
+    {
+      question: "¿Cuál es el precio?",
+      answer: "147€",
+    },
+    {
+      question: "¿Y si me parece caro?",
+      answer:
+        "Si de verdad crees que no vas a amortizar 147€ dominando la habilidad más demandada de este siglo en cuanto tomes la primera buena decisión después de ver los primeros 10 minutos de esta masterclass… entonces eres demasiado desconfiado. Mejor no entres.",
     },
   ];
 

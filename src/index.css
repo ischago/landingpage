@@ -1,6 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Instrument+Serif:ital@0;1&display=swap");
 @import "tailwindcss";
 
+/* For Webkit browsers (Chrome, Safari, Edge) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent; /* Use a Tailwind color */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: gray; /* Use a Tailwind color */
+  border-radius: 4px;
+}
+
+/* For Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: gray transparent; /* thumb color track color */
+}
+
 @font-face {
   font-family: Neue;
   src: url("./assets/fonts/HelveticaNeue-Thin.otf");
