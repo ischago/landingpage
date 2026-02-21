@@ -13,8 +13,16 @@ import frame from "./assets/Frame.svg";
 import firstVideo from "./assets/first-video.MP4";
 import secondVideo from "./assets/second-video.MP4";
 import thirdVideo from "./assets/third-video.MP4";
+
 import review1 from "./assets/review-1.svg";
 import review2 from "./assets/review-2.svg";
+import review3 from "./assets/review-3.jpeg";
+import review4 from "./assets/review-4.jpeg";
+import review5 from "./assets/review-5.jpeg";
+import review6 from "./assets/review-6.jpeg";
+import review7 from "./assets/review-7.jpeg";
+import review8 from "./assets/review-8.jpeg";
+import review9 from "./assets/review-9.jpeg";
 
 function App() {
   const videoRef = useRef(null);
@@ -180,6 +188,15 @@ function App() {
                 description="“No tenía experiencia y acabé haciendo contenido increible”"
                 videoSrc={thirdVideo}
               />
+            </div>
+            <div className="col-span-3 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+              <img src={review3} alt="review-3" className="rounded-lg" />
+              <img src={review4} alt="review-4" className="rounded-lg" />
+              <img src={review5} alt="review-5" className="rounded-lg" />
+              <img src={review6} alt="review-6" className="rounded-lg" />
+              <img src={review7} alt="review-7" className="rounded-lg" />
+              <img src={review8} alt="review-8" className="rounded-lg" />
+              <img src={review9} alt="review-9" className="rounded-lg" />
             </div>
           </div>
         </div>

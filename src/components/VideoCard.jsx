@@ -12,7 +12,7 @@ export default function VideoCard({
         <h3 className="font-neue-medium text-2xl text-black mb-1 tracking-tight">
           {title}
         </h3>
-        <p className="font-neue font-extrabold text-lg text-black/90 leading-tight">
+        <p className="font-neue font-extrabold text-lg md:text-xl text-black/90 leading-tight">
           {description}
         </p>
       </div>
