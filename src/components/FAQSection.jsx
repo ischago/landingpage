@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const FAQItem = ({ question, answer, isOpen, onClick }) => {
+const FAQItem = ({ question, answer, isOpen, onClick, list }) => {
   return (
     <div className="bg-[#FFFFFF]/10 backdrop-blur-sm rounded-lg overflow-hidden transition-colors duration-300">
       <div
@@ -22,6 +22,16 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
         <div className="overflow-hidden">
           <div className="p-4 pt-0 text-[#EDEDED] font-neue text-sm leading-relaxed">
             {answer}
+            {list && (
+              <ul>
+                {list.map((item, index) => (
+                  <li key={index}>
+                    <span>- </span>
+                    {item.text}
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         </div>
       </div>
@@ -35,8 +45,19 @@ export default function FAQSection() {
   const faqs = [
     {
       question: "¿Para quién es esta Masterclass?",
-      answer:
-        "Es para ti si cumples cualquiera de estas condiciones: Sientes que tu contenido no refleja lo que realmente eres y sabes que eres capaz de tener más atención. Estás cansado de copiar formatos que “funcionan” o buscar “modas” que no te representan. Quieres empezar a crear contenido y no ser uno más. Quieres dejar de competir por atención y empezar a construir autoridad dentro de tu sector.",
+      answer: "Es para ti si cumples cualquiera de estas condiciones:",
+      list: [
+        {
+          text: "Sientes que tu contenido no refleja lo que realmente eres y sabes que eres capaz de tener más atención.",
+        },
+        {
+          text: " Estás cansado de copiar formatos que “funcionan” o buscar “modas” que no te representan.",
+        },
+        { text: "Quieres empezar a crear contenido y no ser uno más." },
+        {
+          text: "Quieres dejar de competir por atención y empezar a construir autoridad dentro de tu sector.",
+        },
+      ],
     },
     {
       question: "¿En qué se diferencia esta Masterclass?",
@@ -75,7 +96,7 @@ export default function FAQSection() {
     {
       question: "¿Y si me parece caro?",
       answer:
-        "Si de verdad crees que no vas a amortizar 147€ dominando la habilidad más demandada de este siglo en cuanto tomes la primera buena decisión después de ver los primeros 10 minutos de esta masterclass… entonces eres demasiado desconfiado. Mejor no entres.",
+        "Si de verdad crees que no vas a amortizar 147€ en cuanto veas los primeros 10 minutos de esta masterclass y dominando la habilidad más demandada del mercado… entonces eres demasiado desconfiado. Mejor no entres.",
     },
   ];
 
@@ -102,6 +123,7 @@ export default function FAQSection() {
             key={index}
             question={faq.question}
             answer={faq.answer}
+            list={faq?.list}
             isOpen={openIndex === index}
             onClick={() => handleToggle(index)}
           />

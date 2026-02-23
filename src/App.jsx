@@ -32,7 +32,7 @@ function App() {
     if (videoRef.current) {
       videoRef.current.muted = false;
       videoRef.current.controls = true;
-      videoRef.current.play();
+      videoRef.current.load();
       setIsPlaying(true);
     }
   };
@@ -116,7 +116,6 @@ function App() {
                   muted
                   autoPlay
                   playsInline
-                  loop
                   disablePictureInPicture
                   className="w-full h-auto md:max-w-4xl md:max-h-[548px] object-cover opacity-95 group-hover:opacity-100 transition-opacity duration-500"
                 >
