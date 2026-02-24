@@ -38,8 +38,6 @@ function App() {
   };
 
   const reviews = [
-    { src: review1, alt: "review-1" },
-    { src: review2, alt: "review-2" },
     { src: review3, alt: "review-3" },
     { src: review4, alt: "review-4" },
     { src: review5, alt: "review-5" },
