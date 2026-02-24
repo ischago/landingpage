@@ -16,17 +16,13 @@ import thirdVideo from "./assets/third-video.MP4";
 
 import review1 from "./assets/review-1.svg";
 import review2 from "./assets/review-2.svg";
-import review3 from "./assets/review-3.jpeg";
-import review4 from "./assets/review-4.jpeg";
-import review5 from "./assets/review-5.jpeg";
-import review6 from "./assets/review-6.jpeg";
-import review7 from "./assets/review-7.jpeg";
-import review8 from "./assets/review-8.jpeg";
-import review9 from "./assets/review-9.jpeg";
+import IOSLoader from "./components/IOSLoader";
+import ReviewGrid from "./components/ReviewGrid";
 
 function App() {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handlePlay = () => {
     if (videoRef.current) {
@@ -37,15 +33,9 @@ function App() {
     }
   };
 
-  const reviews = [
-    { src: review3, alt: "review-3" },
-    { src: review4, alt: "review-4" },
-    { src: review5, alt: "review-5" },
-    { src: review6, alt: "review-6" },
-    { src: review7, alt: "review-7" },
-    { src: review8, alt: "review-8" },
-    { src: review9, alt: "review-9" },
-  ];
+  const handleMasComentarios = () => {
+    setIsLoading(true);
+  };
 
   const linkoToMasterclass =
     "https://whop-link-tracker.vercel.app/api/t/jaquebue/landing--9un";
@@ -209,15 +199,16 @@ function App() {
                 videoSrc={thirdVideo}
               />
             </div>
-            <div className="col-span-3 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-              {reviews.map((review, index) => (
-                <img
-                  key={index}
-                  src={review.src}
-                  alt={review.alt}
-                  className="rounded-lg w-full object-cover shadow-sm"
-                />
-              ))}
+            <button
+              className={`text-[#007AFF] col-span-3 ${isLoading ? "hidden" : ""}`}
+              onClick={handleMasComentarios}
+            >
+              Mas comentarios
+            </button>
+            <div
+              className={`col-span-3 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ${isLoading ? "" : "hidden"}`}
+            >
+              {isLoading && <ReviewGrid />}
             </div>
           </div>
         </div>
