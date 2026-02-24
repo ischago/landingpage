@@ -43,7 +43,7 @@ const ReviewGrid = () => {
           key={index}
           src={review.src}
           alt={review.alt}
-          className="rounded-lg w-full object-cover shadow-sm hover:scale-[1.02] transition-transform duration-300"
+          className="rounded-lg w-full object-cover shadow-sm"
         />
       ))}
     </>
