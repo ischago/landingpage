@@ -37,6 +37,21 @@ function App() {
     }
   };
 
+  const reviews = [
+    { src: review1, alt: "review-1" },
+    { src: review2, alt: "review-2" },
+    { src: review3, alt: "review-3" },
+    { src: review4, alt: "review-4" },
+    { src: review5, alt: "review-5" },
+    { src: review6, alt: "review-6" },
+    { src: review7, alt: "review-7" },
+    { src: review8, alt: "review-8" },
+    { src: review9, alt: "review-9" },
+  ];
+
+  const linkoToMasterclass =
+    "https://whop-link-tracker.vercel.app/api/t/jaquebue/landing--9un";
+
   return (
     <>
       <section className="relative py-10 bg-[#F5FFF4] animate-fade-in-up">
@@ -55,14 +70,18 @@ function App() {
             estés buscando.
           </p>
           <div className="flex flex-col items-center gap-2 w-full px-4">
-            <button className="font-neue text-xl font-extrabold text-center bg-[#346C2D] text-white px-8 py-4 rounded-lg hover:bg-[#2a5624] transition-colors cursor-pointer relative">
+            <a
+              href={linkoToMasterclass}
+              target="_blank"
+              className="font-neue text-xl font-extrabold text-center bg-[#346C2D] text-white px-8 py-4 rounded-lg hover:bg-[#2a5624] transition-colors cursor-pointer relative"
+            >
               Acceder
               <img
                 src={textStartHere}
                 alt=""
                 className="absolute top-3 -left-30 scale-100 sm:right-40 sm:scale-100"
               />
-            </button>
+            </a>
           </div>
           <div className="w-full px-4 flex justify-center mt-20 relative z-10">
             <div className="relative w-full max-w-4xl md:max-h-[548px] mx-auto rounded-xl shadow-[0_5px_20px_0_#0004] overflow-hidden group">
@@ -145,9 +164,13 @@ function App() {
       </section>
       <section>
         <div className="flex items-center justify-center bg-[#F5FFF4] py-10">
-          <button className="font-neue text-xs font-extrabold text-center bg-[#346C2D] text-white px-5 py-3 rounded-lg hover:bg-[#2a5624] tracking-wider transition-colors cursor-pointer">
+          <a
+            href={linkoToMasterclass}
+            target="_blank"
+            className="font-neue text-xs font-extrabold text-center bg-[#346C2D] text-white px-5 py-3 rounded-lg hover:bg-[#2a5624] tracking-wider transition-colors cursor-pointer"
+          >
             Desbloquear Contenido Completo
-          </button>
+          </a>
         </div>
       </section>
       <section className="animate-fade-in-up">
@@ -189,13 +212,14 @@ function App() {
               />
             </div>
             <div className="col-span-3 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-              <img src={review3} alt="review-3" className="rounded-lg" />
-              <img src={review4} alt="review-4" className="rounded-lg" />
-              <img src={review5} alt="review-5" className="rounded-lg" />
-              <img src={review6} alt="review-6" className="rounded-lg" />
-              <img src={review7} alt="review-7" className="rounded-lg" />
-              <img src={review8} alt="review-8" className="rounded-lg" />
-              <img src={review9} alt="review-9" className="rounded-lg" />
+              {reviews.map((review, index) => (
+                <img
+                  key={index}
+                  src={review.src}
+                  alt={review.alt}
+                  className="rounded-lg w-full object-cover shadow-sm"
+                />
+              ))}
             </div>
           </div>
         </div>
