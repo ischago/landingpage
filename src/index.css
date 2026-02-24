@@ -82,3 +82,57 @@
 .animate-fade-in-up {
   animation: fadeInUp 2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
+
+@keyframes ios-bounce {
+  0%,
+  80%,
+  100% {
+    transform: scale(0.6);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-ios-bounce {
+  animation: ios-bounce 1.4s ease-in-out infinite both;
+}
+
+.ios-spinner {
+  border-style: solid;
+  border-radius: 50%;
+  animation: ios-spin 0.9s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+.ios-activity-line {
+  animation: ios-activity-fade 1.2s linear infinite;
+}
+
+@keyframes ios-activity-fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes ios-activity-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ios-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
