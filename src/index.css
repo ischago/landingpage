@@ -23,22 +23,22 @@
 
 @font-face {
   font-family: Neue;
-  src: url("./assets/fonts/HelveticaNeue-Thin.otf");
+  src: url("./assets/fonts/HelveticaNeue-Thin.woff2");
 }
 
 @font-face {
   font-family: Neue-Bold;
-  src: url("./assets/fonts/HelveticaNeue-Bold.otf");
+  src: url("./assets/fonts/HelveticaNeue-Bold.woff2");
 }
 
 @font-face {
   font-family: Neue-Medium;
-  src: url("./assets/fonts/HelveticaNeue-Medium.otf");
+  src: url("./assets/fonts/HelveticaNeue-Medium.woff2");
 }
 
 @font-face {
   font-family: Neue-Light;
-  src: url("./assets/fonts/HelveticaNeue-Light.otf");
+  src: url("./assets/fonts/HelveticaNeue-Light.woff2");
 }
 
 @theme {
