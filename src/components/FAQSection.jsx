@@ -25,7 +25,10 @@ const FAQItem = ({ question, answer, isOpen, onClick, list }) => {
             {list && (
               <ul>
                 {list.map((item, index) => (
-                  <li key={index}>{item.text}</li>
+                  <li key={index}>
+                    <span>- </span>
+                    {item.text}
+                  </li>
                 ))}
               </ul>
             )}
