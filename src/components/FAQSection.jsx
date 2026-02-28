@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const FAQItem = ({ question, answer, isOpen, onClick, list }) => {
   return (
-    <div className="bg-[#FFFFFF]/10 backdrop-blur-sm rounded-lg overflow-hidden transition-colors duration-300">
+    <div className="bg-[#FFFFFF]/10 backdrop-blur-sm rounded-lg overflow-hidden">
       <div
         className="flex items-center justify-between p-4 cursor-pointer"
         onClick={onClick}
@@ -10,7 +10,7 @@ const FAQItem = ({ question, answer, isOpen, onClick, list }) => {
         <h3 className="font-neue-bold text-[#9DE0A7] text-lg select-none">
           {question}
         </h3>
-        <span className="text-white text-2xl font-light">
+        <span className="text-white text-2xl font-light select-none">
           {isOpen ? "−" : "+"}
         </span>
       </div>
@@ -25,10 +25,7 @@ const FAQItem = ({ question, answer, isOpen, onClick, list }) => {
             {list && (
               <ul>
                 {list.map((item, index) => (
-                  <li key={index}>
-                    <span>- </span>
-                    {item.text}
-                  </li>
+                  <li key={index}>{item.text}</li>
                 ))}
               </ul>
             )}
@@ -135,7 +132,7 @@ export default function FAQSection() {
         <p className="font-neue-light text-[#9DE0A7] text-xl tracking-widest uppercase mb-2">
           DIRECTED BY
         </p>
-        <h2 className="font-instrument-serif italic max-[480px]:text-[80px] text-[120px] md:text-[180px] bg-linear-to-b from-[#9DE0A7] via-[#457345] to-[#163A11] bg-clip-text text-transparent leading-[1.2] px-10 select-none pointer-events-none">
+        <h2 className="font-instrument-serif italic text-[120px] sm:text-[150px] md:text-[180px] bg-linear-to-b from-[#9DE0A7] via-[#457345] to-[#163A11] bg-clip-text text-transparent leading-[1.2] px-10 select-none pointer-events-none">
           Jaquebue
         </h2>
       </div>
